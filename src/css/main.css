@@ -110,6 +110,8 @@ nav .mobile .links{
     flex-direction: column;
     position: relative;
     z-index: 200;
+
+    background-color: black;
 }
 nav .mobile .links a{
     font-size: 20px;
@@ -133,7 +135,7 @@ nav .mobile .links a:hover{     /*menu mobile */
         HEADER
 -----------------------*/
 header{
-    background-image: url(../img/halo-infinite-cover-darkmode.jpg);
+    background-image: url(../img/halo-infinite-cover-darkmode.jpg);     /*en la compu la foto esta siempre en el centro*/
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -151,6 +153,10 @@ header{
     nav .mobile{
         display: block;
     }
+    header{
+        background-position: center 40px;           /*esto pa evitar que el microsoft(logo) tape el jefe maestro*/
+        height: 30vh;
+    }
 }
 
 @media screen and (max-width: 1132px) {     /*cunado sea mas chico que 1132 oculta esto*/
@@ -160,5 +166,8 @@ header{
 
     nav .more{
         display: flex;  /*esto no ocultar*/
+    }
+    header{
+        height: 70vh;
     }
 }
