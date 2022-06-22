@@ -347,6 +347,44 @@ h3{
 .info p{
     font-size: 20px;
 }
+/*---------------------
+        GET THE GAME - STORE
+-----------------------*/
+
+#get-the-game{
+    text-align: center;
+    padding: 50px 0;
+
+    color: white;
+}
+
+#get-the-game h2{
+    color: white;
+}
+#get-the-game h3{
+    padding: 0;
+    margin: 0;    
+    font-size: 1.8rem;
+}
+
+#get-the-game .item-store{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    align-items: flex-start;
+}
+#get-the-game .item-store .left{
+    padding: 0 20px;
+    width: 100%;
+}
+#get-the-game .item-store .left img{
+    width: 500px;
+}
+
+#get-the-game .item-store .right{
+    text-align: left;
+    width: 80%;
+}
 
 @media screen and (max-width: 1519px) {
     .info{
@@ -385,6 +423,19 @@ h3{
         width: 90%;
         margin: 0 auto;
     }
+    #get-the-game .item-store{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px;
+    }
+    #get-the-game .item-store .left img{
+        width: 300px;
+    }
+    #get-the-game .item-store .right{
+        text-align: center;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 1192px) {     /*cunado sea mas chico que 1132 oculta esto*/
@@ -414,5 +465,15 @@ h3{
     .info{
         width: 600px;
         margin: 0 auto;
+    }
+    #get-the-game .item-store{
+        width: 100%;
+        padding: 20px;
+    }
+    #get-the-game .item-store .left img{
+        width: 300px;
+    }
+    #get-the-game .item-store .right{
+        width: 100%;
     }
 }
