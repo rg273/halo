@@ -323,17 +323,13 @@ h3{
     justify-content: center;
     align-items: center;
     z-index: 100;
-
 }
-
 
 @media screen and (max-width: 701px) {  /*estilos pa mobile*/
     nav {
         width: 100%;
         padding: 0;
-
     }
-
     nav ul{
         display: none;
     }
@@ -344,11 +340,15 @@ h3{
         background-position: center 40px;           /*esto pa evitar que el microsoft(logo) tape el jefe maestro*/
         height: 30vh;
     }
-    #banner{
-        position: initial !important;
-        z-index: 100;
-        width: 100%;
-    }    
+    #slider #current{
+        width: 90% !important;
+    }
+    #slider #current iframe{
+        height: 300px;
+    }
+    #slider #videos-container{
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 1192px) {     /*cunado sea mas chico que 1132 oculta esto*/
@@ -366,5 +366,11 @@ h3{
         position: initial !important;
         z-index: 100;
         width: 100%;
+    }
+    #slider #current{
+        width: 80% !important;
+    }
+    #slider #current iframe{
+        height: 500px;
     }
 }
