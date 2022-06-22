@@ -146,12 +146,12 @@ header{
 -----------------------*/
 
 h2{
-    font-size: 1.9em;
+    font-size: 3.3rem;
     position: relative;     /*relative xq vamos a usar el before*/
     display: inline-block;
     padding: 0;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 h2::before{
     content: '';
@@ -223,6 +223,109 @@ h2::before{
 .green-link:hover::before{
     transform: scaleX(1);
 }
+
+/*---------------------
+        VIDEOS
+-----------------------*/
+.w-75{
+    width: 75%;
+    margin: 0 auto;
+}
+h3{
+    font-size: 1.6em;
+    padding-top: 50px;
+
+    color: white;
+}
+
+#videos{
+    text-align: center;
+    padding: 50px 0;
+
+    background-image: url(../img/bg-videos.png);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: white; esto sirviria para poner el fondo con una opacidad blanca xq la img original es png y esta configurada ya(se le reduce la opacidad al 50% en adobe para configurar creo) */
+
+    color: white;
+}
+#videos #slider #controls{
+    display: flex;
+    justify-content: center;
+}
+#videos #slider #controls #prev,
+#videos #slider #controls #next {
+    border: none;
+    height: 50px;
+    width: 80px;
+    background-color: rgb(58,58,58);
+    color: white;
+    cursor: pointer;
+    display: flex;      /* para acomodar el texto que hay en cada boton*/
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+#videos #slider #controls #prev:hover ,
+#videos #slider #controls #next:hover {
+    background-color: rgb(37,37,37);
+}
+#videos #slider #current{                   /*video container*/
+    width: 1280px;
+    margin: 50px auto;
+    border: solid 1px #00c3ff;
+}
+
+#videos #slider #videos-container{              /*acomodar la lista de videos*/
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    overflow:auto;
+    justify-content: center;
+}
+#videos #slider #videos-container .item{
+    border:1px solid #00c3ff;
+    cursor: pointer;
+    overflow: hidden;
+
+    min-width: 320px;
+    height: 180px;
+}
+
+#videos #slider #videos-container .item a{
+    position: relative;                     /*relative xq vamos a tocar nuestra imagen de los videos*/
+}
+#videos #slider #videos-container .item img{            /*la img se dapta al contenedor*/
+    object-fit: contain;
+    min-width: 320px;
+    height: 180px;
+    transition: opacity 0.3s ease;
+}
+#videos #slider #videos-container .item:hover img{
+    opacity: 0.6;
+    object-fit: contain;
+}
+#videos #slider #videos-container .item a::before{
+    font-family: "Material Icons";
+    content: ">";                                                  /*cambiar el logo dsp*/
+    font-size: 24px;
+    color: white;
+    position: absolute;                 /*absolute para poder mover el logo de reproducir video*/
+    display: block;
+    left: 135px;
+    top: -95px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+
+}
+
 
 @media screen and (max-width: 701px) {  /*estilos pa mobile*/
     nav {
